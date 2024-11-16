@@ -11,7 +11,7 @@ Run in powershell shell with Administrator mode
 - [powershell](install-powershell.sh)
 - [docker](install-docker.sh)
 - [Azure CLI](install-az-cli.sh)
-- [Azure Powershell](install-az-powershell.sh)
+- [Azure Powershell](install-az-powershell.ps1)
 - [1password CLI](install-1password-cli.sh)
 - [Terraform](install-terraform.sh)
 - [Platform modules](install-platform-modules.ps1)
