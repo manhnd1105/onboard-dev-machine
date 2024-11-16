@@ -1,24 +1,38 @@
 #!/usr/bin/pwsh
-[CmdletBinding()]
-param (
-    [Parameter(Mandatory = $true)]
-    [string] $Pat,
-)
-    
-# Use a local safe keyvault to store ADO PAT
 Install-Module -Name Microsoft.PowerShell.SecretManagement -Repository PSGallery
 Install-Module -Name Microsoft.PowerShell.SecretStore -Repository PSGallery
 
-$VaultName = "platform-kv"
-$PatSecretKey = "ado-pat"
-Register-SecretVault -Name $VaultName -ModuleName Microsoft.PowerShell.SecretStore -DefaultVault
-Set-Secret -Name $PatSecretKey -SecureStringSecret $Pat -Vault $VaultName
+# Register the SecretStore as a vault
+$vaultName = "platform-kv"
+$patSecretKey = "ado-pat"
+$vaultPassword = (Read-Host "Setup vault password" | ConvertTo-SecureString -AsPlainText -Force)
 
-# Connect to the platform feed
-Register-PSResourceRepository `
-	-Name "viedoc-feed" `
-	-Uri "https://pkgs.dev.azure.com/manhnguyen0359/_packaging/viedoc-feed/nuget/v3/index.json" `
-	-Trusted `
-	-CredentialInfo ([Microsoft.PowerShell.PSResourceGet.UtilClasses.PSCredentialInfo]::new($VaultName, $PatSecretKey))
- 
-Install-PSResource -Name "Platform" -Repository "viedoc-feed" -Credential (New-Object System.Management.Automation.PSCredential($pat))
+Register-SecretVault -Name $vaultName -ModuleName Microsoft.PowerShell.SecretStore -DefaultVault
+$storeConfiguration = @{
+    Authentication = 'Password'
+    PasswordTimeout = 3600 # 1 hour
+    Interaction = 'None'
+    Password = $vaultPassword
+    Confirm = $false
+}
+Set-SecretStoreConfiguration @storeConfiguration
+Unlock-SecretStore $vaultPassword
+
+# Set PAT as secret on vault
+$rawPat = (Read-Host "Raw PAT")
+$credential = (New-Object System.Management.Automation.PSCredential("user", ($rawPat | ConvertTo-SecureString -AsPlainText -Force)))
+Set-Secret -Name $patSecretKey -Vault $vaultName -Secret $credential
+
+# Register the private feed as PS repository
+$credentialInfo = ([Microsoft.PowerShell.PSResourceGet.UtilClasses.PSCredentialInfo]::new($vaultName, $patSecretKey))
+$org = "manhnguyen0359"
+$feedName = "viedoc-feed"
+$feedUrl = "https://pkgs.dev.azure.com/$org/_packaging/$feedName/nuget/v3/index.json"
+
+Register-PSResourceRepository -Name $feedName `
+    -Uri $feedUrl `
+    -Trusted `
+    -CredentialInfo $credentialInfo
+	
+# Install platform module
+Install-PsResource -Name "Platform" -Repository $feedName -Scope CurrentUser
