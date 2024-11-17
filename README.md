@@ -14,7 +14,7 @@ Run in powershell shell with Administrator mode
 - Azure Powershell`curl -sL https://raw.githubusercontent.com/manhnd1105/onboard-dev-machine/refs/heads/main/install-az-powershell.sh | sudo bash`
 - 1password CLI `curl -sL https://raw.githubusercontent.com/manhnd1105/onboard-dev-machine/refs/heads/main/install-1password-cli.sh | sudo bash`
 - Terraform `curl -sL https://raw.githubusercontent.com/manhnd1105/onboard-dev-machine/refs/heads/main/install-terraform.sh | sudo bash`
-- Platform modules `curl -sL https://raw.githubusercontent.com/manhnd1105/onboard-dev-machine/refs/heads/main/install-platform-modules.sh | sudo bash`
+- Platform modules `curl -sL https://raw.githubusercontent.com/manhnd1105/onboard-dev-machine/refs/heads/main/install-platform-modules.ps1 | sudo pwsh`
 - Dotnet SDKs `curl -sL https://raw.githubusercontent.com/manhnd1105/onboard-dev-machine/refs/heads/main/install-dotnet-sdks.sh | bash`
 - Dotnet intellisense `curl -sL https://raw.githubusercontent.com/manhnd1105/onboard-dev-machine/refs/heads/main/dotnet-intellisense.sh | bash`
 - Graphical support `sudo apt install wslu`
