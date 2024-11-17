@@ -9,6 +9,7 @@ Run in powershell shell with Administrator mode
 
 # Linux machine (or WSL)
 - powershell `curl -sL https://raw.githubusercontent.com/manhnd1105/onboard-dev-machine/refs/heads/main/install-powershell.sh | sudo bash`
+- configure powershell `curl -sL https://raw.githubusercontent.com/manhnd1105/onboard-dev-machine/refs/heads/main/configure-powershell.ps1 | sudo pwsh`
 - docker `curl -sL https://raw.githubusercontent.com/manhnd1105/onboard-dev-machine/refs/heads/main/install-docker.sh | sudo bash`
 - Azure CLI `curl -sL https://raw.githubusercontent.com/manhnd1105/onboard-dev-machine/refs/heads/main/install-az-cli.sh | sudo bash`
 - Azure Powershell`curl -sL https://raw.githubusercontent.com/manhnd1105/onboard-dev-machine/refs/heads/main/install-az-powershell.sh | sudo bash`
