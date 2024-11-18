@@ -6,6 +6,7 @@ Run in powershell shell with Administrator mode
 - [Windows package manager](./install-chocolatey.ps1)
 - [Windows softwares](install-windows-softwares.ps1)
 - [WSL](install-wsl.ps1)
+- [Configure WSL](configure-wsl.ps1)
 
 # Linux machine (or WSL)
 - powershell `curl -sL https://raw.githubusercontent.com/manhnd1105/onboard-dev-machine/refs/heads/main/install-powershell.sh | sudo bash`
