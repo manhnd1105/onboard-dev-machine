@@ -19,4 +19,4 @@ Run in powershell shell with Administrator mode
 - Dotnet SDKs `curl -sL https://raw.githubusercontent.com/manhnd1105/onboard-dev-machine/refs/heads/main/install-dotnet-sdks.sh | bash`
 - Dotnet intellisense `curl -sL https://raw.githubusercontent.com/manhnd1105/onboard-dev-machine/refs/heads/main/dotnet-intellisense.sh | bash`
 - Graphical support `sudo apt install wslu`
-- Development tools `sudo apt-get install git nodejs openssl python3`
+- Development tools `sudo apt-get install git nodejs openssl python3 python3-pip`
