@@ -18,7 +18,7 @@ $tools = @(
   notepadplusplus
   telegram
   microsoft-windows-terminal
-
+  openjdk  # to use smartgit in WSL
 )
 Invoke-Expression (Invoke-WebRequest -Uri "https://raw.githubusercontent.com/manhnd1105/onboard-dev-machine/refs/heads/main/install-windows-softwares.ps1 $tools").Content
 
