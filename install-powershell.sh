@@ -4,5 +4,6 @@ dpkg -i packages-microsoft-prod.deb
 apt update
 apt install powershell -y
 
-#/usr/bin/pwsh
-chsh 
+# set as default shell
+# sudo required
+chsh -s /usr/bin/pwsh
