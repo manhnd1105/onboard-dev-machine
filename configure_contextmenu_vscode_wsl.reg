@@ -5,5 +5,5 @@ Windows Registry Editor Version 5.00
 @="Open w&ith Code WSL"
 
 [HKEY_CLASSES_ROOT\Directory\shell\VSCode_wsl\command]
-@="wsl code \"$(wslpath %V)\""
+@="wsl code $(wslpath '%1')"
 
