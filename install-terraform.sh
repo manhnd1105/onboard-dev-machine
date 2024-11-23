@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+# requires sudo
 apt-get update && apt-get install -y gnupg software-properties-common
 wget -O- https://apt.releases.hashicorp.com/gpg | \
 gpg --dearmor | \

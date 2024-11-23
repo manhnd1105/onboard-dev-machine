@@ -1,3 +1,5 @@
+
+
 # bash parameter completion for the dotnet CLI
 function _dotnet_bash_complete()
 {
@@ -7,12 +9,3 @@ function _dotnet_bash_complete()
   read -d '' -ra COMPREPLY < <(compgen -W "${candidates[*]:-}" -- "$cur")
 }
 complete -f -F _dotnet_bash_complete dotnet
-```
-```powershell
-# PowerShell parameter completion shim for the dotnet CLI
-Register-ArgumentCompleter -Native -CommandName dotnet -ScriptBlock {
-    param($wordToComplete, $commandAst, $cursorPosition)
-        dotnet complete --position $cursorPosition "$commandAst" | ForEach-Object {
-            [System.Management.Automation.CompletionResult]::new($_, $_, 'ParameterValue', $_)
-        }
-}
