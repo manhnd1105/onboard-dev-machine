@@ -9,15 +9,15 @@ Invoke-Expression (Invoke-WebRequest -Uri "https://raw.githubusercontent.com/man
 
 # development tools
 $tools = @(
-  obsidian
-  smartgit
-  postman
-  7zip
-  choco-cleaner
-  vscode
-  notepadplusplus
-  telegram
-  microsoft-windows-terminal
+  obsidian  # note tool
+  postman  # http client tool
+  7zip  # file compression tool
+  choco-cleaner  # cleaning util for chocolatey
+  vscode  # visual studio code
+  notepadplusplus  # text editor
+  telegram  # messaging
+  microsoft-windows-terminal  # terminal
+  greenshot  # image capture
   openjdk  # to use smartgit in WSL
 )
 Invoke-Expression (Invoke-WebRequest -Uri "https://raw.githubusercontent.com/manhnd1105/onboard-dev-machine/refs/heads/main/install-windows-softwares.ps1 $tools").Content
