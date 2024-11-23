@@ -19,6 +19,10 @@ Invoke-Expression (Invoke-WebRequest -Uri "https://raw.githubusercontent.com/man
 # Linux machine (or WSL)
 Run in default bash shell
 ```bash
+# configure wsl
+curl -sL https://raw.githubusercontent.com/manhnd1105/onboard-dev-machine/refs/heads/main/configure_wsl_disable_windows_path.sh | bash
+
+
 # powershell
 curl -sL https://raw.githubusercontent.com/manhnd1105/onboard-dev-machine/refs/heads/main/install-powershell.sh | sudo bash
 curl -sL https://raw.githubusercontent.com/manhnd1105/onboard-dev-machine/refs/heads/main/configure-powershell.ps1 | sudo pwsh
