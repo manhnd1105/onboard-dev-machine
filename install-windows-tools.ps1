@@ -1,3 +1,3 @@
 param($tools)
 
-choco install $tools
+choco install ($tools -join " ")
