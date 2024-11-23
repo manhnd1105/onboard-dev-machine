@@ -5,7 +5,7 @@ mkdir -p $HOME/dotnet && tar zxf dotnet-sdk-6.0.428-linux-x64.tar.gz -C $HOME/do
 tar zxf dotnet-sdk-8.0.404-linux-x64.tar.gz -C $HOME/dotnet
 rm dotnet-sdk-*.tar.gz
 
-# Add to ~/.bashrc
-echo "export DOTNET_ROOT=$HOME/dotnet" >> ~/.bashrc
-echo "export PATH=$PATH:$HOME/dotnet" >> ~/.bashrc
-source ~/.bashrc
+cat <<EOF >> ~/profile.d/dotnet.sh
+export DOTNET_ROOT=$HOME/dotnet
+export PATH=$PATH:$HOME/dotnet
+EOF
