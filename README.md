@@ -8,7 +8,19 @@ Run in powershell shell with Administrator mode
 Invoke-Expression (Invoke-WebRequest -Uri "https://raw.githubusercontent.com/manhnd1105/onboard-dev-machine/refs/heads/main/install-chocolatey.ps1").Content
 
 # development tools
-Invoke-Expression (Invoke-WebRequest -Uri "https://raw.githubusercontent.com/manhnd1105/onboard-dev-machine/refs/heads/main/install-windows-softwares.ps1").Content
+$tools = @(
+  obsidian
+  smartgit
+  postman
+  7zip
+  choco-cleaner
+  vscode
+  notepadplusplus
+  telegram
+  microsoft-windows-terminal
+
+)
+Invoke-Expression (Invoke-WebRequest -Uri "https://raw.githubusercontent.com/manhnd1105/onboard-dev-machine/refs/heads/main/install-windows-softwares.ps1 $tools").Content
 
 # wsl
 Invoke-Expression (Invoke-WebRequest -Uri "https://raw.githubusercontent.com/manhnd1105/onboard-dev-machine/refs/heads/main/install-wsl.ps1").Content
