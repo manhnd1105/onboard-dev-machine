@@ -7,6 +7,8 @@ tar zxf dotnet-sdk-8.0.404-linux-x64.tar.gz -C $HOME/dotnet
 rm dotnet-sdk-*.tar.gz
 
 cat <<EOF >> ~/profile.d/dotnet.sh
-export DOTNET_ROOT=$HOME/dotnet
-export PATH=$PATH:$HOME/dotnet
+if [[ ":\$PATH:" != *":\$HOME/dotnet:"* ]]; then
+    export DOTNET_ROOT=\$HOME/dotnet
+    export PATH=\$PATH:\$HOME/dotnet
+fi
 EOF
