@@ -74,5 +74,7 @@ sudo apt-get install git nodejs openssl python3 python3-pip
 # ansible
 curl -sL https://raw.githubusercontent.com/manhnd1105/onboard-dev-machine/refs/heads/main/install-ansible.sh | sudo bash
 
+# smartgit
+curl -sL https://raw.githubusercontent.com/manhnd1105/onboard-dev-machine/refs/heads/main/install-smartgit.sh | sudo bash
 ```
 
