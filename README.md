@@ -46,6 +46,12 @@ curl -sL https://raw.githubusercontent.com/manhnd1105/onboard-dev-machine/refs/h
 curl -sL https://raw.githubusercontent.com/manhnd1105/onboard-dev-machine/refs/heads/main/install-powershell.sh | sudo bash
 curl -sL https://raw.githubusercontent.com/manhnd1105/onboard-dev-machine/refs/heads/main/configure-powershell.ps1 | sudo pwsh
 
+# python
+curl -sL https://raw.githubusercontent.com/manhnd1105/onboard-dev-machine/refs/heads/main/install-python.sh | sudo bash
+
+# git
+curl -sL https://raw.githubusercontent.com/manhnd1105/onboard-dev-machine/refs/heads/main/install-git.sh | sudo bash
+
 # docker
 curl -sL https://raw.githubusercontent.com/manhnd1105/onboard-dev-machine/refs/heads/main/install-docker.sh | sudo bash
 
@@ -68,11 +74,11 @@ curl -sL https://raw.githubusercontent.com/manhnd1105/onboard-dev-machine/refs/h
 # interop support
 sudo apt install wslu
 
-# development tools
-sudo apt-get install git nodejs openssl python3 python3-pip
-
 # ansible
 curl -sL https://raw.githubusercontent.com/manhnd1105/onboard-dev-machine/refs/heads/main/install-ansible.sh | sudo bash
+
+# nodejs
+curl -sL https://raw.githubusercontent.com/manhnd1105/onboard-dev-machine/refs/heads/main/install-nodejs.sh | sudo bash
 
 # smartgit
 curl -sL https://raw.githubusercontent.com/manhnd1105/onboard-dev-machine/refs/heads/main/install-smartgit.sh | sudo bash
