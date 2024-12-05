@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # requires sudo
-apt install python3 python3-pip
+apt install python3 python3-pip pipx
 
 cat <<EOF >> ~/profile.d/python.sh
 
