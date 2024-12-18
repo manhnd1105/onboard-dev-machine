@@ -1,0 +1,13 @@
+autocorrect-formatter
+editing-toolbar
+find-and-replace-in-selection
+obsidian-excalidraw-plugin
+obsidian-icon-folder
+obsidian-image-toolkit
+obsidian-livesync
+obsidian-regex-replace
+password-protection
+remotely-save
+share-note
+sheet-plus
+sheets
