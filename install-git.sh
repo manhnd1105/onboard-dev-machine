@@ -1,3 +1,3 @@
 #!/bin/bash
 
-apt install git openssl 
+apt install git openssl -y
