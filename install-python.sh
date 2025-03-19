@@ -1,11 +1,16 @@
 #!/bin/bash
 
 # requires sudo
-apt install python3 python3-pip pipx
+curl https://pyenv.run | bash
+exec $SHELL
+pyenv install 3.12
+pyenv global 3.12
 
 cat <<EOF >> ~/profile.d/python.sh
-
-if [[ ":\$PATH:" != *":\$HOME/.local/bin:"* ]]; then
-    export PATH=\$PATH:\$HOME/.local/bin
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]]
+if [[ ":\$PATH:" != *":\$PYENV_ROOT/bin:"* ]]; then
+    export PATH=\$PATH:\$PYENV_ROOT/bin
 fi
+eval "$(pyenv init - bash)"
 EOF
