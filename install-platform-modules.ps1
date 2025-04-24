@@ -36,3 +36,7 @@ Register-PSResourceRepository -Name $feedName `
 	
 # Install platform module
 Install-PsResource -Name "Platform" -Repository $feedName -Scope CurrentUser
+
+Install-Package powershell-yaml
+Install-Package BuildHelpers
+Import-Module Platform
