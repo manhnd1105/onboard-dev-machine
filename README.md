@@ -82,4 +82,8 @@ curl -sL https://raw.githubusercontent.com/manhnd1105/onboard-dev-machine/refs/h
 
 # smartgit
 curl -sL https://raw.githubusercontent.com/manhnd1105/onboard-dev-machine/refs/heads/main/install-smartgit.sh | sudo bash
+
+# bruno
+curl -sL https://raw.githubusercontent.com/manhnd1105/onboard-dev-machine/refs/heads/main/install-bruno.sh | sudo bash
+
 ```
