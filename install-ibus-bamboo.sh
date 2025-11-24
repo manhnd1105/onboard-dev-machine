@@ -1,4 +1,6 @@
 #!/bin/bash
+# guide https://gist.github.com/lelinhtinh/fc660f3222a1da1b7ff923a4080742e5
+
 # sudo
 add-apt-repository ppa:bamboo-engine/ibus-bamboo
 apt-get update
