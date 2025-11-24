@@ -86,6 +86,9 @@ curl -sL https://raw.githubusercontent.com/manhnd1105/onboard-dev-machine/refs/h
 # bruno
 curl -sL https://raw.githubusercontent.com/manhnd1105/onboard-dev-machine/refs/heads/main/install-bruno.sh | sudo bash
 
+# git-lfs
+curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash
+
 # ibus-bamboo
 curl -sL https://raw.githubusercontent.com/manhnd1105/onboard-dev-machine/refs/heads/main/install-ibus-bamboo.sh | sudo bash
 
