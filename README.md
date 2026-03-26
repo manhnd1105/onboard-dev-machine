@@ -93,7 +93,7 @@ curl -sL https://raw.githubusercontent.com/manhnd1105/onboard-dev-machine/refs/h
 # git-lfs
 curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash
 
-# ibus-bamboo
-curl -sL https://raw.githubusercontent.com/manhnd1105/onboard-dev-machine/refs/heads/main/install-ibus-bamboo.sh | sudo bash
-
+# vietnamese typing
+#curl -sL https://raw.githubusercontent.com/manhnd1105/onboard-dev-machine/refs/heads/main/install-ibus-bamboo.sh | sudo bash
+curl -sL https://raw.githubusercontent.com/manhnd1105/onboard-dev-machine/refs/heads/main/install-fcitx-lotus.sh | sudo bash
 ```
